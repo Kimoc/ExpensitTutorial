@@ -27,10 +27,17 @@ namespace ExpenseIt
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ExpenseReportPage expenseReportPage = new ExpenseReportPage();
+            // View Expense Report
+            ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);
             this.NavigationService.Navigate(expenseReportPage);
         }
-        //View Expense report
 
+        private void AprietoEnter(object sender, KeyEventArgs e)
+        {
+            // View Expense Report
+            
+            ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);
+            this.NavigationService.Navigate(expenseReportPage);
+        }
     }
 }
